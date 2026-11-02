@@ -88,8 +88,10 @@ nav ul a:hover { color: var(--accent); }
 .btn:hover { border-color: var(--accent); color: var(--accent); }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
 .btn.primary:hover { filter: brightness(1.08); color: var(--bg); }
-.retina svg { width: 100%; height: auto; max-width: 440px; display: block; margin-left: auto; }
-.retina figcaption { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); text-align: right; margin-top: 6px; }
+.retina { margin: 0; }
+.retina img { display: block; width: 100%; max-width: 480px; height: auto; margin-left: auto; background: #fff; border-radius: 8px; padding: 12px; border: 1px solid var(--line); }
+.retina figcaption { font-size: 0.84rem; line-height: 1.5; color: var(--muted); max-width: 480px; margin: 10px 0 0 auto; }
+.retina figcaption b { color: var(--fg); font-weight: 600; }
 
 /* Sections */
 section { padding-block: 56px; border-top: 1px solid var(--line); }
@@ -160,8 +162,7 @@ footer { padding-block: 32px 48px; color: var(--muted); font-size: 0.85rem; bord
 @media (max-width: 820px) {
   .hero .wrap, .p-grid, .cols2 { grid-template-columns: minmax(0, 1fr); }
   .hero .wrap { padding-block: 40px 32px; gap: 28px; }
-  .retina svg { margin: 0 auto; }
-  .retina figcaption { text-align: center; }
+  .retina img, .retina figcaption { margin-left: auto; margin-right: auto; }
   nav ul { display: none; }
 }
 @media (max-width: 480px) {
@@ -200,54 +201,9 @@ footer { padding-block: 32px 48px; color: var(--muted); font-size: 0.85rem; bord
         <a class="btn" href="https://scholar.google.com/">Google Scholar</a>
       </div>
     </div>
-    <figure class="retina" aria-label="Schematic cross-section of the retina showing an amacrine cell stratifying in the inner plexiform layer">
-      <svg viewBox="0 0 440 300" role="img">
-        <title>Retina cross-section schematic</title>
-        <g font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--muted)">
-          <text x="0" y="34">ONL</text>
-          <text x="0" y="78">OPL</text>
-          <text x="0" y="122">INL</text>
-          <text x="0" y="168">IPL</text>
-          <text x="0" y="250">GCL</text>
-          <text x="404" y="150" fill="var(--accent-2)">OFF</text>
-          <text x="404" y="210" fill="var(--accent-2)">ON</text>
-        </g>
-        <!-- layers -->
-        <rect x="40" y="14" width="356" height="40" rx="3" fill="var(--ph-bg)"/>
-        <rect x="40" y="70" width="356" height="12" rx="2" fill="var(--line)"/>
-        <rect x="40" y="96" width="356" height="40" rx="3" fill="var(--ph-bg)"/>
-        <rect x="40" y="144" width="356" height="80" rx="3" fill="var(--accent-soft)"/>
-        <line x1="40" y1="184" x2="396" y2="184" stroke="var(--line)" stroke-dasharray="3 4"/>
-        <rect x="40" y="232" width="356" height="30" rx="3" fill="var(--ph-bg)"/>
-        <!-- photoreceptor somata -->
-        <g fill="var(--line)">
-          <circle cx="70" cy="34" r="6"/><circle cx="110" cy="30" r="6"/><circle cx="150" cy="36" r="6"/><circle cx="190" cy="31" r="6"/>
-          <circle cx="230" cy="35" r="6"/><circle cx="270" cy="30" r="6"/><circle cx="310" cy="35" r="6"/><circle cx="350" cy="31" r="6"/>
-        </g>
-        <!-- amacrine cell: soma in INL, dendrites in middle of IPL -->
-        <g stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round">
-          <path d="M218 128 L218 184"/>
-          <path d="M218 184 C190 180 160 188 120 182 M160 186 C150 176 140 194 128 196"/>
-          <path d="M218 184 C250 190 290 178 330 186 M285 182 C292 172 302 196 314 172"/>
-          <path d="M218 184 C205 194 196 204 176 200 M218 184 C232 196 246 172 262 172"/>
-        </g>
-        <circle cx="218" cy="122" r="9" fill="var(--accent)"/>
-        <!-- ganglion cells -->
-        <g fill="var(--accent-2)">
-          <circle cx="120" cy="247" r="7"/><circle cx="300" cy="247" r="7"/>
-        </g>
-        <g stroke="var(--accent-2)" stroke-width="1.5" fill="none">
-          <path d="M120 240 L120 200 M120 200 C110 196 96 200 84 198"/>
-          <path d="M300 240 L300 156 M300 156 C312 152 330 158 346 154"/>
-        </g>
-        <!-- light -->
-        <g stroke="var(--muted)" stroke-width="1.5" fill="none">
-          <path d="M210 296 L210 272 M204 278 L210 270 L216 278"/>
-          <path d="M228 296 L228 272 M222 278 L228 270 L234 278"/>
-        </g>
-        <text x="240" y="292" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--muted)">light</text>
-      </svg>
-      <figcaption>VGluT3 amacrine cell, dendrites in the middle of the IPL</figcaption>
+    <figure class="retina">
+      <img src="retina_parallel.jpg" width="1400" height="1306" alt="Diagram of the mammalian retina: photoreceptors, bipolar, amacrine and ganglion cells form parallel circuits (colored) that turn one input image into different output representations, such as contrast, blurred spatial structure, and edges.">
+      <figcaption><b>Parallel processing in the retina.</b> Different retinal circuits extract different features from the same visual scene, and each ganglion cell type sends its own version of the image to the brain.</figcaption>
     </figure>
   </div>
 </header>
