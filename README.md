@@ -1,6 +1,10 @@
 # Chin I Lin — personal website
 
-Upload everything in this folder to a GitHub repo named `cilin6268.github.io`.
-- Put figure images in `images/` and replace each `<div class="fig-ph ...">` with `<img src="images/NAME.png" alt="...">`.
-- Replace `files/Chin-I_Lin_CV.pdf` with a public version (no phone number).
-- Update GitHub, Scholar, LinkedIn and ORCID links in index.html.
+Repository: cilin6268.github.io
+
+Upload every file in this folder to the repository root, replacing the
+existing ones. index.html expects all images, videos and PDFs to sit
+beside it at the top level (no subfolders).
+
+Before going live: replace Chin-I_Lin_CV.pdf with a version that does not
+contain your phone number.
