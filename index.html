@@ -127,7 +127,7 @@ nav ul a:hover { color: var(--accent); }
 /* Sections */
 section { padding-block: 56px; border-top: 1px solid var(--line); }
 .sec-head { display: flex; flex-direction: column; gap: 6px; margin-bottom: 28px; }
-.prose { max-width: var(--col); }
+.prose { max-width: 80ch; }
 .prose p { margin: 0 0 1em; }
 
 /* Projects */
@@ -137,7 +137,7 @@ section { padding-block: 56px; border-top: 1px solid var(--line); }
 .status { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 8px; border-radius: 99px; border: 1px solid currentColor; }
 .status.review { color: var(--accent); }
 .status.pub { color: var(--accent-2); }
-.cite { color: var(--muted); font-size: 0.92rem; margin: 6px 0 22px; max-width: var(--col); }
+.cite { color: var(--muted); font-size: 0.92rem; margin: 6px 0 22px; max-width: 80ch; }
 .cite em { font-style: italic; }
 .p-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 32px; align-items: start; }
 dl.logic { margin: 0; display: grid; gap: 14px; }
@@ -147,8 +147,16 @@ dl.logic dd { margin: 0; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
 .chip { font-family: var(--font-mono); font-size: 0.74rem; padding: 3px 9px; border-radius: 4px; background: var(--accent-soft); color: var(--fg); }
 .figs { display: grid; gap: 18px; }
-.lead { max-width: var(--col); margin: -8px 0 22px; }
+.lead { max-width: 80ch; margin: -8px 0 22px; }
 .p-wide { display: grid; gap: 32px; margin-top: 32px; }
+.more-btn { justify-self: start; font: 500 0.9rem var(--font-body); color: var(--accent); background: none;
+  border: 1px solid var(--line); border-radius: 999px; padding: 7px 16px; cursor: pointer; }
+.more-btn:hover { border-color: var(--accent); }
+.more-btn::before { content: "+ "; }
+.more-btn[aria-expanded="true"]::before { content: "\2212 "; }
+.more[hidden] { display: none !important; }
+.more { display: grid; gap: 32px; }
+.p-wide figure img, .p-wide .pair figure img { cursor: zoom-in; }
 .p-wide figure img { display: block; width: 100%; height: auto; border: 0; border-radius: 0; background: transparent; mix-blend-mode: var(--fig-blend); }
 .p-wide figure.crispr img { width: 85%; }
 .p-wide figure.seg { max-width: 800px; width: 100%; justify-self: center; }
@@ -206,6 +214,9 @@ ol.pubs .j { font-size: 0.9rem; }
 .cols2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; }
 
 /* Contact */
+.contact-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.headshot { width: 168px; height: auto; border-radius: 8px; flex: none; border: 1px solid var(--line); }
+.contact-note { max-width: 56ch; margin: 0 0 14px; color: var(--muted); }
 .contact { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .email { font-family: var(--font-mono); font-size: 1rem; user-select: all; padding: 9px 14px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
 footer { padding-block: 32px 48px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); }
@@ -400,7 +411,7 @@ footer { padding-block: 32px 48px; color: var(--muted); font-size: 0.85rem; bord
       <div class="p-wide">
         <div class="pair">
         <figure>
-          <img src="vg3_editing.png" width="582" height="219" alt="Schematic of single-cell labeling: a Cre-dependent tdTomato construct with a non-targeting guide delivered by subretinal injection and electroporation in a newborn VG3-iCreER;LSL-GCaMP6f;LSL-Cas9 mouse." loading="lazy">
+          <img src="vg3_editing.png" width="1164" height="438" alt="Schematic of single-cell labeling: a Cre-dependent tdTomato construct with a non-targeting guide delivered by subretinal injection and electroporation in a newborn VG3-iCreER;LSL-GCaMP6f;LSL-Cas9 mouse." loading="lazy">
           <figcaption class="cap"><b>Labeling single VG3 cells inside a labeled population.</b> A Cre-dependent tdTomato reporter carrying a non-targeting guide (sgCtrl) is delivered by subretinal injection and electroporation in newborn VG3-iCreER;LSL-GCaMP6f;LSL-Cas9 mice. Only a few VG3 cells take up the construct, so tdTomato marks individual cells within a GCaMP6f-expressing population and their responses can be read out cell by cell instead of as a population average.</figcaption>
         </figure>
         <figure>
@@ -454,7 +465,7 @@ footer { padding-block: 32px 48px; color: var(--muted); font-size: 0.85rem; bord
         <h3>Histone deacetylase 3 inhibition decreases cerebral edema and protects the blood&ndash;brain barrier after stroke</h3>
         <span class="status pub">Molecular Neurobiology 2023</span>
       </div>
-      <p class="cite">H. Lu, R. Ashiqueali, <b>C.-I. Lin</b>, A. Walchale, V. Clendaniel, R. Matheson, M. Fisher, E. H. Lo, M. Selim, A. Shehadah. <em>Mol. Neurobiol.</em> 60, 235&ndash;246. Third author.</p>
+      <p class="cite">H. Lu, R. Ashiqueali, <b>C.-I. Lin</b>, A. Walchale, V. Clendaniel, R. Matheson, M. Fisher, E. H. Lo, M. Selim, A. Shehadah. <em>Mol. Neurobiol.</em> 60, 235&ndash;246.</p>
       <div class="links" style="margin:-14px 0 22px"><a href="https://doi.org/10.1007/s12035-022-03083-z">Journal</a><a href="https://pubmed.ncbi.nlm.nih.gov/?term=10.1007%2Fs12035-022-03083-z%5Bdoi%5D">PubMed</a><a href="Lu2023_MolNeurobiol.pdf">PDF</a></div>
       <p class="lead">Work from my time at Beth Israel Deaconess Medical Center, outside the retina: an epigenetic target for limiting brain injury after stroke.</p>
       <div class="p-grid solo">
@@ -518,7 +529,8 @@ footer { padding-block: 32px 48px; color: var(--muted); font-size: 0.85rem; bord
     <div>
       <div class="sec-head"><span class="label">Experience</span><h2>Training and work</h2></div>
       <div class="tl">
-        <div class="row"><span class="when">Ph.D. – 2026</span><div class="what"><b>Graduate Researcher, Kerschensteiner Lab</b><span>Washington University in St. Louis, St. Louis, MO, USA</span></div></div>
+        <div class="row"><span class="when">2026 – present</span><div class="what"><b>Postdoctoral Researcher, Kerschensteiner Lab</b><span>Washington University in St. Louis, St. Louis, MO, USA</span></div></div>
+        <div class="row"><span class="when">Ph.D. 2021 – 2026</span><div class="what"><b>Ph.D., Neuroscience &mdash; Graduate Researcher, Kerschensteiner Lab</b><span>Washington University in St. Louis, St. Louis, MO, USA</span></div></div>
         <div class="row"><span class="when">2020 – 2021</span><div class="what"><b>Research Assistant, Stroke and Cerebrovascular Diseases</b><span>Beth Israel Deaconess Medical Center / Harvard Medical School, Boston, MA, USA</span></div></div>
         <div class="row"><span class="when">2019 – 2020</span><div class="what"><b>R&amp;D, RNA-NGS Department</b><span>Welgene Biotech, Taipei, Taiwan</span></div></div>
         <div class="row"><span class="when">2019</span><div class="what"><b>Research Assistant, Retinal Regeneration Group</b><span>National Tsing Hua University, Hsinchu, Taiwan</span></div></div>
@@ -545,11 +557,16 @@ footer { padding-block: 32px 48px; color: var(--muted); font-size: 0.85rem; bord
 <section id="contact">
   <div class="wrap">
     <div class="sec-head"><span class="label">Contact</span><h2>Get in touch</h2></div>
-    <div class="contact">
-      <span class="email" id="email">chini.l@wustl.edu</span>
-      <button class="btn" id="copy" type="button">Copy email</button>
-      <a class="btn" href="https://www.linkedin.com/">LinkedIn</a>
-      <a class="btn" href="https://orcid.org/">ORCID</a>
+    <div class="contact-row">
+      <img class="headshot" src="photo_chinilin.jpg" width="900" height="900" alt="Portrait of Chin I Lin." loading="lazy">
+      <div>
+        <p class="contact-note">I am looking for industry roles and am open to any opportunity. Feel free to reach out about openings, collaborations, or questions.</p>
+        <div class="contact">
+          <span class="email" id="email">cilin6268@gmail.com</span>
+          <button class="btn" id="copy" type="button">Copy email</button>
+          <a class="btn" href="https://www.linkedin.com/">LinkedIn</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -672,6 +689,28 @@ document.getElementById('copy').addEventListener('click', function () {
   document.getElementById('lb-x').addEventListener('click', close);
   lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) close(); });
+})();
+(function () {
+  document.querySelectorAll('.more-btn').forEach(function (b) {
+    var t = document.getElementById(b.getAttribute('aria-controls')); if (!t) return;
+    b.addEventListener('click', function () {
+      var open = t.hidden;
+      t.hidden = !open; b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      b.textContent = open ? 'Hide supporting figures' : 'Show ' + (b.getAttribute('data-n') || '') + ' supporting figures';
+    });
+  });
+  var lb = document.getElementById('lb'); if (!lb) return;
+  var im = document.getElementById('lb-img'), ti = document.getElementById('lb-t'), ca = document.getElementById('lb-c');
+  document.querySelectorAll('.p-wide figure img').forEach(function (g) {
+    g.addEventListener('click', function () {
+      var fc = g.closest('figure').querySelector('figcaption');
+      var b = fc ? fc.querySelector('b') : null;
+      im.src = g.getAttribute('src'); im.alt = g.alt || '';
+      ti.textContent = b ? b.textContent.replace(/\.$/, '') : '';
+      ca.textContent = fc ? fc.textContent.replace(ti.textContent, '').replace(/^[.\s]+/, '') : '';
+      lb.hidden = false; document.getElementById('lb-x').focus();
+    });
+  });
 })();
 </script>
 </body>
