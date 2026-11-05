@@ -27,18 +27,7 @@
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
   --col: 68ch;
   --wide: 1080px;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #11161d; --surface: #18202a; --fg: #e6eaf0; --muted: #9aa5b4; --line: #2a3442;
-    --accent: #e27aa9; --accent-2: #6fc59c; --accent-soft: #2a1a24; --ph-bg: #1c2530; --fig-bg: #ffffff; --fig-pad: 12px; --fig-blend: normal;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #11161d; --surface: #18202a; --fg: #e6eaf0; --muted: #9aa5b4; --line: #2a3442;
-  --accent: #e27aa9; --accent-2: #6fc59c; --accent-soft: #2a1a24; --ph-bg: #1c2530; --fig-bg: #ffffff; --fig-pad: 12px; --fig-blend: normal;
-  color-scheme: dark;
+  color-scheme: light;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -178,8 +167,6 @@ dl.logic dd { margin: 0; }
 .p-grid.solo { grid-template-columns: minmax(0, 1fr); }
 .p-grid.solo dl.logic { max-width: 80ch; }
 .p-wide .video-frame video { mix-blend-mode: var(--fig-blend); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .p-wide figure img { background: #fff; padding: 10px; border-radius: 6px; } }
-:root[data-theme="dark"] .p-wide figure img { background: #fff; padding: 10px; border-radius: 6px; }
 figure { margin: 0; }
 .fig-ph {
   aspect-ratio: 4 / 3; max-width: 100%; border: 1.5px dashed var(--line); border-radius: 6px;
