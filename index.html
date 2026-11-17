@@ -51,14 +51,14 @@ h3 { font-size: 1.35rem; }
   text-transform: uppercase; color: var(--muted);
 }
 
-.skills button.sk {
+.skills .sk {
   font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer;
-  border-bottom: 1px dotted var(--accent); display: inline-flex; align-items: baseline; gap: 4px;
+  border-bottom: 1px dotted var(--accent); display: inline; text-align: left; vertical-align: baseline;
 }
-.skills button.sk:hover { color: var(--accent); }
-.skills button.sk::after {
-  content: ""; width: 13px; height: 11px; border: 1.5px solid currentColor; border-radius: 2px;
-  color: var(--accent); flex: none; align-self: center;
+.skills .sk:hover { color: var(--accent); }
+.skills .sk::after {
+  content: ""; display: inline-block; width: 13px; height: 11px; margin-left: 5px;
+  border: 1.5px solid currentColor; border-radius: 2px; color: var(--accent); vertical-align: -1px;
   background: radial-gradient(circle at 70% 70%, currentColor 1.6px, transparent 1.7px);
 }
 .sk-note { font-size: 0.86rem; color: var(--muted); margin: -16px 0 22px; }
@@ -200,7 +200,7 @@ ol.pubs .j { font-size: 0.9rem; }
 .links a:hover { border-bottom-width: 2px; }
 
 /* Skills */
-.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px 36px; }
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(336px, 1fr)); gap: 28px 28px; }
 .skills h3 { font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; margin-bottom: 8px; }
 .skills ul { margin: 0; padding-left: 1.1em; color: var(--muted); font-size: 0.94rem; }
 .skills li { margin-bottom: 4px; }
@@ -302,7 +302,7 @@ footer { padding-block: 32px 48px; color: var(--muted); font-size: 0.85rem; bord
     <article class="project">
       <div class="p-head">
         <h3>Inhibition confines dendritic integration to set behavior-specific sensory gain</h3>
-        <span class="status review">Submitted · Nature Communications</span>
+        <span class="status review">Submitted · Science Advances</span>
       </div>
       <p class="cite"><b>C.-I. Lin</b>, A. Jo, P. Ramakrishna, X. Song, J. L. Morgan, D. Kerschensteiner. First author. Presented at ARVO 2024, 2025, and 2026.</p>
       <p class="lead">This study shows how a single type of retinal interneuron uses inhibition inside its own dendrites to decide how sensitive mice are to looming threats, without changing their sensitivity for other visual behaviors.</p>
@@ -499,7 +499,7 @@ footer { padding-block: 32px 48px; color: var(--muted); font-size: 0.85rem; bord
   <div class="wrap">
     <div class="sec-head"><span class="label">Publications</span><h2>All papers</h2></div>
     <ol class="pubs">
-      <li><span class="yr">2026</span><div><div class="t">Inhibition confines dendritic integration to set behavior-specific sensory gain</div><div class="a"><b>C.-I. Lin</b>, A. Jo, P. Ramakrishna, X. Song, J. L. Morgan, D. Kerschensteiner</div><div class="j">Submitted to <em>Nature Communications</em></div></div></li>
+      <li><span class="yr">2026</span><div><div class="t">Inhibition confines dendritic integration to set behavior-specific sensory gain</div><div class="a"><b>C.-I. Lin</b>, A. Jo, P. Ramakrishna, X. Song, J. L. Morgan, D. Kerschensteiner</div><div class="j">Submitted to <em>Science Advances</em></div></div></li>
       <li><span class="yr">2025</span><div><div class="t">Molecular mechanism establishing the OFF pathway in vision</div><div class="a">F. Soto, <b>C.-I. Lin</b>, A. Jo, S.-Y. Chou, E. G. Harding, P. A. Ruzycki, G. K. Seabold, R. S. Petralia, D. Kerschensteiner</div><div class="j"><em>Nature Communications</em> 16, 3708</div><div class="links"><a href="https://doi.org/10.1038/s41467-025-59046-0">Journal</a><a href="https://pubmed.ncbi.nlm.nih.gov/40251167/">PubMed</a><a href="Soto2025_NatCommun.pdf">PDF</a></div></div></li>
       <li><span class="yr">2024</span><div><div class="t">Subcellular pathways through VGluT3-expressing mouse amacrine cells provide locally tuned object-motion-selective signals in the retina</div><div class="a">K. Friedrichsen, J. C. Hsiang, <b>C.-I. Lin</b>, L. McCoy, K. Valkova, D. Kerschensteiner, J. L. Morgan</div><div class="j"><em>Nature Communications</em> 15, 2965</div><div class="links"><a href="https://doi.org/10.1038/s41467-024-46996-0">Journal</a><a href="https://pubmed.ncbi.nlm.nih.gov/38580652/">PubMed</a><a href="Friedrichsen2024_NatCommun.pdf">PDF</a></div></div></li>
       <li><span class="yr">2023</span><div><div class="t">Histone deacetylase 3 inhibition decreases cerebral edema and protects the blood-brain barrier after stroke</div><div class="a">H. Lu, R. Ashiqueali, <b>C.-I. Lin</b>, A. Walchale, V. Clendaniel, R. Matheson, M. Fisher, E. H. Lo, M. Selim, A. Shehadah</div><div class="j"><em>Molecular Neurobiology</em> 60, 235–246</div><div class="links"><a href="https://doi.org/10.1007/s12035-022-03083-z">Journal</a><a href="https://pubmed.ncbi.nlm.nih.gov/?term=10.1007%2Fs12035-022-03083-z%5Bdoi%5D">PubMed</a><a href="Lu2023_MolNeurobiol.pdf">PDF</a></div></div></li>
@@ -514,12 +514,12 @@ footer { padding-block: 32px 48px; color: var(--muted); font-size: 0.85rem; bord
     <div class="sec-head"><span class="label">Skills</span><h2>Methods I use</h2></div>
     <p class="sk-note">Items with a small image icon have an example from my own work &mdash; click to view.</p>
     <div class="skills">
-      <div><h3>Imaging</h3><ul><li>Two-photon calcium and glutamate imaging</li><li>Confocal microscopy</li><li>Quantitative image analysis</li></ul></div>
-      <div><h3>Electrophysiology</h3><ul><li><button type="button" class="sk" data-fig="patch">Patch-clamp recording</button></li><li>Multielectrode array (MEA) recording</li></ul></div>
-      <div><h3>Programming and analysis</h3><ul><li>MATLAB, Python</li><li>Custom analysis pipelines and algorithms</li><li>Signal and image processing, statistics</li><li>Visual stimulus design and experiment control</li></ul></div>
-      <div><h3>Retinal and molecular</h3><ul><li>Subretinal, intraocular, and <button type="button" class="sk" data-fig="brain">brain injections</button>, viral transduction</li><li>Electroporation, immunohistochemistry, <button type="button" class="sk" data-fig="ap">AP staining</button>, tissue culture</li><li>PCR, genotyping, RNA library prep and sequencing QC</li></ul></div>
-      <div><h3>Behavior</h3><ul><li>Looming-evoked defensive behavior</li><li>Optomotor response</li><li><button type="button" class="sk" data-fig="dlc">DeepLabCut pose tracking</button></li></ul></div>
-      <div><h3>Software and figures</h3><ul><li>Fiji/ImageJ, <button type="button" class="sk" data-fig="na">NeuroAnatomy plugin</button></li><li>Adobe Illustrator, Premiere Pro</li></ul></div>
+      <div><h3>Imaging</h3><ul><li><span class="sk" role="button" tabindex="0" data-fig="opl">Two-photon calcium and glutamate imaging</span></li><li>Confocal microscopy</li><li>Quantitative image analysis</li></ul></div>
+      <div><h3>Electrophysiology</h3><ul><li><span class="sk" role="button" tabindex="0" data-fig="patch">Patch-clamp recording</span></li><li>Multielectrode array (MEA) recording</li></ul></div>
+      <div><h3>Programming and analysis</h3><ul><li>MATLAB, Python</li><li>Custom analysis pipelines and algorithms</li><li>Signal and image processing, statistics</li><li><span class="sk" role="button" tabindex="0" data-fig="stim">Visual stimulus design</span></li></ul></div>
+      <div><h3>Retinal and molecular</h3><ul><li>Subretinal, intraocular, and <span class="sk" role="button" tabindex="0" data-fig="brain">brain injections</span>, viral transduction</li><li>Electroporation, immunohistochemistry, <span class="sk" role="button" tabindex="0" data-fig="ap">AP staining</span>, tissue culture</li><li>CRISPR genome editing, PCR, genotyping, RNA library prep and sequencing QC</li></ul></div>
+      <div><h3>Behavior</h3><ul><li>Looming-evoked defensive behavior</li><li><span class="sk" role="button" tabindex="0" data-fig="omr">Optomotor response</span></li><li><span class="sk" role="button" tabindex="0" data-fig="dlc">DeepLabCut pose tracking</span></li></ul></div>
+      <div><h3>Software and figures</h3><ul><li>Fiji/ImageJ, <span class="sk" role="button" tabindex="0" data-fig="na">NeuroAnatomy plugin</span></li><li>Adobe Illustrator, Premiere Pro</li></ul></div>
     </div>
   </div>
 </section>
@@ -672,6 +672,24 @@ document.getElementById('copy').addEventListener('click', function () {
       alt: 'Traced dendritic arbors of individual VG3 amacrine cells edited with a control guide, sgGabrg2 or sgGlra2/3, with plots of branch number and length per branch for the three groups.',
       title: 'Reconstructing dendritic arbors cell by cell',
       cap: 'Dendritic arbors of single VG3 amacrine cells, traced in Fiji with the NeuroAnatomy (SNT) plugin after sparse CRISPR editing with a control guide, sgGabrg2 or sgGlra2/3. Branch number and length per branch are unchanged across the three groups, so removing these inhibitory receptors alters how the dendrites process signals without reshaping the arbor itself.'
+    },
+    stim: {
+      src: 'skill_stimulus.gif',
+      alt: 'Animation of a square stepping across a grid over the dendritic field of a W3 retinal ganglion cell, bright then dark at each position, next to a spike raster of the responses in control and VG3-Gabrg2 cKO retinas.',
+      title: 'Mapping a receptive field, stimulus to spikes',
+      cap: 'I write the visual stimuli and the software that runs the experiment. Here a square steps across a grid covering the dendritic field of a W3 ganglion cell, one position at a time in random order, each square shown bright for 0.5 s and then dark for 0.5 s, while the cell is recorded. The raster on the right shows the spikes each trial produced, in control and VG3-Gabrg2 cKO retinas. Stimulus timing and the recording are synchronised, so every spike can be assigned to the square that caused it.'
+    },
+    omr: {
+      src: 'skill_optomotor.jpg',
+      alt: 'Drawing of a mouse on a platform inside a drum of moving vertical stripes, and a plot of contrast threshold for control and cKO mice.',
+      title: 'Measuring contrast sensitivity in behaving mice',
+      cap: 'A mouse sits on a platform surrounded by rotating vertical stripes and turns its head to follow them. Lowering the stripe contrast until the tracking stops gives the contrast threshold for this reflex. Control and VG3-Gabrg2 cKO mice have the same threshold, which shows that the change in escape behaviour is specific to threat detection rather than a general shift in how well the animals see contrast.'
+    },
+    opl: {
+      src: 'skill_opl.jpg',
+      alt: 'Schematic of cones connecting to ON and OFF bipolar cells, with the outer plexiform layer boxed, and glutamate imaging traces from the outer plexiform layer in wild-type and Lrfn2 knockout retinas, with and without TBOA.',
+      title: 'Glutamate imaging at the first synapse',
+      cap: 'Two-photon iGluSnFR imaging in the outer plexiform layer, where cones release glutamate onto bipolar cell dendrites. In wild-type retina the glutamate signal follows the light steps, and blocking glutamate uptake with TBOA makes it much larger. In Lrfn2 knockout retina the signal is absent, with or without TBOA.'
     }
   };
   var lb = document.getElementById('lb'); if (!lb) return;
@@ -683,8 +701,11 @@ document.getElementById('copy').addEventListener('click', function () {
     lb.hidden = false; document.getElementById('lb-x').focus();
   }
   function close() { lb.hidden = true; if (last) last.focus(); }
-  document.querySelectorAll('button.sk').forEach(function (b) {
+  document.querySelectorAll('.sk').forEach(function (b) {
     b.addEventListener('click', function () { last = b; open(b.getAttribute('data-fig')); });
+    b.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); last = b; open(b.getAttribute('data-fig')); }
+    });
   });
   document.getElementById('lb-x').addEventListener('click', close);
   lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
